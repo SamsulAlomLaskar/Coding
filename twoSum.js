@@ -31,7 +31,7 @@ console.log(res);
 let array = [2, 7, 11, 15];
 const target = 9;
 let tempAry = [];
-const sm = nne.reduce((prev, curr, ind, arr) => {
+const sm = array.reduce((prev, curr, ind, arr) => {
   if (prev + curr === target) {
     tempAry.push(arr.indexOf(prev), arr.indexOf(curr));
   }
