@@ -24,28 +24,28 @@ const twoSum = function (nums, target) {
 };
 
 let res = twoSum([2, 7, 11, 15], 9);
-console.log(res);
+console.log("Output 1", res);
 
 //* ====================Method 2===================================
 
 let array = [2, 7, 11, 15];
 const target = 9;
 let tempAry = [];
-const sm = nne.reduce((prev, curr, ind, arr) => {
+const result = array.reduce((prev, curr, ind, arr) => {
   if (prev + curr === target) {
     tempAry.push(arr.indexOf(prev), arr.indexOf(curr));
   }
   return tempAry;
 });
 
-console.log("RES", sm);
+console.log("Output 2", result);
 
-//* ====================Method 2 with variables===================================
+//* ====================Method 3===================================
 
 let tempAryNew = [];
 let tempVar;
 const twoSumNew = function (nums, target) {
-  rr = nums.reduce((prev, curr, _, arr) => {
+  tempVar = nums.reduce((prev, curr, _, arr) => {
     if (prev + curr === target) {
       tempAryNew.push(arr.indexOf(prev), arr.indexOf(curr));
     }
@@ -54,4 +54,4 @@ const twoSumNew = function (nums, target) {
 };
 
 twoSumNew([2, 7, 3, 9], 9);
-console.log(tempVar);
+console.log("Output 3", tempVar);
