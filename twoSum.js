@@ -11,6 +11,8 @@
 * Output: [0,1]
 ! Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
  */
+
+//* ====================Method 1===================================
 const twoSum = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
@@ -24,27 +26,32 @@ const twoSum = function (nums, target) {
 let res = twoSum([2, 7, 11, 15], 9);
 console.log(res);
 
-let nne = [2, 7, 11, 15];
+//* ====================Method 2===================================
+
+let array = [2, 7, 11, 15];
 const target = 9;
-let otp = [];
+let tempAry = [];
 const sm = nne.reduce((prev, curr, ind, arr) => {
   if (prev + curr === target) {
-    otp.push(arr.indexOf(prev), arr.indexOf(curr));
+    tempAry.push(arr.indexOf(prev), arr.indexOf(curr));
   }
-  return otp;
+  return tempAry;
 });
 
 console.log("RES", sm);
-let otpp = [];
-let rr;
+
+//* ====================Method 2 with variables===================================
+
+let tempAryNew = [];
+let tempVar;
 const twoSumNew = function (nums, target) {
   rr = nums.reduce((prev, curr, _, arr) => {
     if (prev + curr === target) {
-      otpp.push(arr.indexOf(prev), arr.indexOf(curr));
+      tempAryNew.push(arr.indexOf(prev), arr.indexOf(curr));
     }
-    return otpp;
+    return tempAryNew;
   });
 };
 
 twoSumNew([2, 7, 3, 9], 9);
-console.log(rr);
+console.log(tempVar);
