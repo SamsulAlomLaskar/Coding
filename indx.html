@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="callParent">
+      <li style="cursor: pointer" class="call1">Home1</li>
+      <li style="cursor: pointer" class="call2">Home2</li>
+      <li style="cursor: pointer" class="call3">Home3</li>
+      <li style="cursor: pointer" class="call4">Home4</li>
+    </ul>
+    <script>
+      let callP = document.querySelector("#callParent");
+      callP.addEventListener("click", (event) => {
+        console.log(event);
+        let target = event.target.classList.value;
+        console.log(target, "Target");
+        switch (target) {
+          case call1:
+            console.log("HOME1");
+            break;
+          case call2:
+            console.log("HOME2");
+            break;
+          case call3:
+            console.log("HOME3");
+            break;
+          case call4:
+            console.log("HOME4");
+            break;
+
+          default:
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>
