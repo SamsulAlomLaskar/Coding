@@ -12,7 +12,7 @@
 ! Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
  */
 
-//* ==================== Method 1 ===================================
+//* =================================== Method 1 ===================================
 const twoSum = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
@@ -26,16 +26,16 @@ const twoSum = function (nums, target) {
 let res = twoSum([2, 7, 11, 15], 9);
 console.log("Output 1", res);
 
-//* ==================== Method 2 ===================================
+//* =================================== Method 2 ===================================
 
 let array = [2, 7, 11, 15];
 const target = 9;
 let tempAry = [];
-<<<<<<< .mine
-const result = array.reduce((prev, curr, ind, arr) => {
-=======
+// <<<<<<< .mine
+// const result = array.reduce((prev, curr, ind, arr) => {
+// =======
 const sm = array.reduce((prev, curr, ind, arr) => {
->>>>>>> .theirs
+  // >>>>>>> .theirs
   if (prev + curr === target) {
     tempAry.push(arr.indexOf(prev), arr.indexOf(curr));
   }
@@ -44,7 +44,7 @@ const sm = array.reduce((prev, curr, ind, arr) => {
 
 console.log("Output 2", result);
 
-//* ==================== Method 3 ===================================
+//* =================================== Method 3 ===================================
 
 let tempAryNew = [];
 let tempVar;

@@ -1,7 +1,6 @@
-//? Distance between two points using arrow function
-
 //* Compose Currying
 
+//? Distance between two points using arrow function
 //! Distance calculation formula ====> \/ (x2-x1)^2 + (y2-y1)^2
 
 const distance = (start, end) =>
