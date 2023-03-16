@@ -125,3 +125,20 @@ const isInRangeArrow = (min) => (max) =>
 
 console.log(isInRangeArrow(20)(30));
  */
+
+const obj1 = {
+  first: 20,
+  second: 30,
+  first: 40,
+};
+
+/*
+ ? The code you provided will cause a syntax error, as you cannot define two properties with the same name in an object.
+
+In the code you provided, the first property is defined twice with different values, which is not allowed. If you try to run this code, you will get a syntax error message indicating that there is a duplicate property name.
+
+* If you run the code you provided in a JavaScript environment, such as a web browser or Node.js, it will not produce a syntax error as I previously mentioned. Instead, the last property value assigned to a duplicated property name will overwrite the previous one, as objects in JavaScript are key-value pairs where each key must be unique.
+*/
+
+console.log(obj1);
+console.log(obj1.first);
