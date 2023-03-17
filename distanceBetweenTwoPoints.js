@@ -137,7 +137,7 @@ const obj1 = {
 
 In the code you provided, the first property is defined twice with different values, which is not allowed. If you try to run this code, you will get a syntax error message indicating that there is a duplicate property name.
 
-* If you run the code you provided in a JavaScript environment, such as a web browser or Node.js, it will not produce a syntax error as I previously mentioned. Instead, the last property value assigned to a x will overwrite the previous one, as objects in JavaScript are key-value pairs where each key must be unique.
+* If you run the code you provided in a JavaScript environment, such as a web browser or Node.js, it will not produce a syntax error as I previously mentioned. Instead, the last property value assigned to a duplicated property name will overwrite the previous one, as objects in JavaScript are key-value pairs where each key must be unique.
 */
 
 console.log(obj1);

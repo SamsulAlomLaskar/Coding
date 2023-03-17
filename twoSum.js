@@ -71,4 +71,4 @@ function twoSum4(nums, target) {
     }
   }
 }
-console.log("Output 3", twoSum4([2, 5, 4, 3, 9], 9));
+console.log("Output 3", twoSum4([2, 5, 4, 5, 3, 9], 10));
