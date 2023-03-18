@@ -16,9 +16,7 @@
 const twoSum = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
-      if (nums[i] + nums[j] === target) {
-        return [i, j];
-      }
+      if (nums[i] + nums[j] === target) return [i, j];
     }
   }
 };
@@ -27,6 +25,8 @@ let res = twoSum([2, 7, 11, 15], 9);
 console.log("Output 1", res);
 
 //* =================================== Method 2 ===================================
+
+//? Using the reduce method
 
 let array = [2, 7, 11, 15];
 const target = 9;
@@ -59,3 +59,16 @@ const twoSumNew = function (nums, target) {
 
 twoSumNew([2, 7, 3, 9], 9);
 console.log("Output 3", tempVar);
+
+//* ====================Method 4=====================
+function twoSum4(nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    const pairNum = target - nums[i];
+    const indexOfNum = nums.indexOf(pairNum);
+
+    if (indexOfNum !== -1 && indexOfNum !== i) {
+      return [i, indexOfNum];
+    }
+  }
+}
+console.log("Output 3", twoSum4([2, 5, 4, 5, 3, 9], 10));
