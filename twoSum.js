@@ -60,7 +60,7 @@ const twoSumNew = function (nums, target) {
 twoSumNew([2, 7, 3, 9], 9);
 console.log("Output 3", tempVar);
 
-//* ====================Method 4=====================
+//*  ====================Method 4=====================
 function twoSum4(nums, target) {
   for (let i = 0; i < nums.length; i++) {
     const pairNum = target - nums[i];
@@ -72,3 +72,41 @@ function twoSum4(nums, target) {
   }
 }
 console.log("Output 3", twoSum4([2, 5, 4, 5, 3, 9], 10));
+
+//*  ====================Method 5=====================
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSumFromLeetCode = function (nums, target) {
+  const mp = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    const diff = target - nums[i];
+
+    if (diff in mp) return [i, mp[diff]];
+
+    mp[nums[i]] = i;
+  }
+};
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSumFromLeetCodeTwo = function (nums, target) {
+  let mp = new Map();
+
+  for (let i = 0; i < nums.length; i++) {
+    let diff = target - nums[i];
+
+    if (mp.has(diff)) {
+      return [i, mp.get(diff)];
+    }
+
+    mp.set(nums[i], i);
+  }
+};
