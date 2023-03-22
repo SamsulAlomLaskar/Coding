@@ -80,7 +80,7 @@ console.log("Output 3", twoSum4([2, 5, 4, 5, 3, 9], 10));
  * @param {number} target
  * @return {number[]}
  */
-var twoSumFromLeetCode = function (nums, target) {
+const twoSumFromLeetCode = function (nums, target) {
   const mp = {};
 
   for (let i = 0; i < nums.length; i++) {
@@ -97,7 +97,7 @@ var twoSumFromLeetCode = function (nums, target) {
  * @param {number} target
  * @return {number[]}
  */
-var twoSumFromLeetCodeTwo = function (nums, target) {
+const twoSumFromLeetCodeTwo = function (nums, target) {
   let mp = new Map();
 
   for (let i = 0; i < nums.length; i++) {
