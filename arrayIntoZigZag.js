@@ -30,9 +30,6 @@ zigZag(arr, n);
 for (let i = 0; i < n; i++) console.log(arr[i] + " ");
 
 /* 
-
-Follow the steps mentioned below to implement the idea:
-
 Create a bool variable flag and set it to true
 Traverse the array from index 0 to N-1 
 If the value of flag is true then check if  arr[i] < arr[i+1] or not , if not then swap
@@ -42,10 +39,10 @@ Print the final array.
 
 */
 
-// JavaScript program to sort an array
-// in Zig-Zag form
+//* JavaScript program to sort an array in Zig-Zag form
 
-// Program for zig-zag conversion of array
+//?  Program for zig-zag conversion of array
+
 function zigZag(arr, n) {
   // Flag true indicates relation "<"
   // is expected, else ">" is expected.
@@ -77,8 +74,8 @@ function zigZag(arr, n) {
 }
 
 // Driver code
-let arr = [4, 3, 7, 8, 6, 2, 1];
-let n = arr.length;
-zigZag(arr, n);
+let arrNew = [4, 3, 7, 8, 6, 2, 1];
+let nN = arrNew.length;
+zigZag(arrNew, nN);
 
-for (let i = 0; i < n; i++) console.log(arr[i] + " ");
+for (let i = 0; i < nN; i++) console.log(arrNew[i] + " ");
