@@ -1,7 +1,6 @@
 //? Convert array into Zig-Zag fashion
 
 /* 
-* Follow the steps mentioned below to implement the idea:
 
 * Sort the array.
 ! Traverse the array from index 1 to N-1, and increase the value of index by 2.
@@ -9,7 +8,7 @@
 Print the final array.
 
 */
-// Program for zig-zag conversion of array
+
 function zigZag(arr, n) {
   // sort the by using the sort function
   arr.sort();
@@ -25,7 +24,8 @@ function zigZag(arr, n) {
 // Driver code
 let arr = [4, 3, 7, 8, 6, 2, 1];
 let n = arr.length;
-zigZag(arr, n);
+let ii = zigZag(arr, n);
+console.log(ii);
 // print the array
 for (let i = 0; i < n; i++) console.log(arr[i] + " ");
 
@@ -43,10 +43,8 @@ Print the final array.
 
 //?  Program for zig-zag conversion of array
 
-function zigZag(arr, n) {
-  // Flag true indicates relation "<"
-  // is expected, else ">" is expected.
-  // The first expected relation is "<"
+function zigZagNew(arr, n) {
+  // Flag true indicates relation "<" is expected, else ">" is expected. The first expected relation is "<"
   let flag = true;
 
   for (let i = 0; i <= n - 2; i++) {
@@ -76,6 +74,6 @@ function zigZag(arr, n) {
 // Driver code
 let arrNew = [4, 3, 7, 8, 6, 2, 1];
 let nN = arrNew.length;
-zigZag(arrNew, nN);
+zigZagNew(arrNew, nN);
 
-for (let i = 0; i < nN; i++) console.log(arrNew[i] + " ");
+// for (let i = 0; i < nN; i++) console.log(arrNew[i] + " ");
