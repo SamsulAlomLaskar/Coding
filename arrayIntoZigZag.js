@@ -5,7 +5,6 @@
 * Sort the array.
 ! Traverse the array from index 1 to N-1, and increase the value of index by 2.
 ? While traversing the array swap arr[i] with arr[i+1].
-Print the final array.
 
 */
 
@@ -30,12 +29,10 @@ console.log(ii);
 for (let i = 0; i < n; i++) console.log(arr[i] + " ");
 
 /* 
-Create a bool variable flag and set it to true
-Traverse the array from index 0 to N-1 
-If the value of flag is true then check if  arr[i] < arr[i+1] or not , if not then swap
-Flip the value of flag
-If the value of flag is false then check if  arr[i] > arr[i+1] or not , if not then swap
-Print the final array.
+* Create a bool variable flag and set it to true
+? Traverse the array from index 0 to N-1 
+! If the value of flag is true then check if  arr[i] < arr[i+1] or not , if not then swap Flip the value of flag
+* If the value of flag is false then check if  arr[i] > arr[i+1] or not , if not then swap. Print the final array.
 
 */
 
