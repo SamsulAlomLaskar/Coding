@@ -73,4 +73,4 @@ let arrNew = [4, 3, 7, 8, 6, 2, 1];
 let nN = arrNew.length;
 zigZagNew(arrNew, nN);
 
-// for (let i = 0; i < nN; i++) console.log(arrNew[i] + " ");
+for (let i = 0; i < nN; i++) console.log(arrNew[i] + " ");
