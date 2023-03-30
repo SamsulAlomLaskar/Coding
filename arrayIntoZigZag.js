@@ -7,7 +7,6 @@
 */
 
 function zigZag(arr, n) {
-  // sort the by using the sort function
   arr.sort();
   //traverse the array from 1 to n-1
   for (let i = 1; i <= n - 2; i++) {
@@ -21,8 +20,8 @@ function zigZag(arr, n) {
 // Driver code
 let arr = [4, 3, 7, 8, 6, 2, 1];
 let n = arr.length;
-let ii = zigZag(arr, n);
-console.log(ii);
+zigZag(arr, n);
+
 // print the array
 for (let i = 0; i < n; i++) console.log(arr[i] + " ");
 
