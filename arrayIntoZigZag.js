@@ -34,13 +34,11 @@ for (let i = 0; i < n; i++) console.log(arr[i] + " ");
 
 //* JavaScript program to sort an array in Zig-Zag form
 
-//?  Program for zig-zag conversion of array
-
 function zigZagNew(arr, n) {
   // Flag true indicates relation "<" is expected, else ">" is expected. The first expected relation is "<"
   let flag = true;
 
-  for (let i = 0; i <= n - 2; i++) {
+  for (let i = 0; i <= nN - 2; i++) {
     // "<" relation expected
     if (flag) {
       // If we have a situation like A > B > C,
