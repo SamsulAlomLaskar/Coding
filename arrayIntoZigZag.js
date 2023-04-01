@@ -1,7 +1,7 @@
 //? Convert array into Zig-Zag fashion
 
 /* 
-* Sort the array.
+* first Sort the array.
 ! Traverse the array from index 1 to N-1, and increase the value of index by 2.
 ? While traversing the array swap arr[i] with arr[i+1].
 */
