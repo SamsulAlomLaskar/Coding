@@ -14,3 +14,10 @@ for (let i = 0; i < arr.length; i++) {
     console.log(arr[i], "LET");
   }, 2000);
 }
+
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => console.log(i), 1000 * i);
+}
+for (var i = 0; i < 5; i++) {
+  setTimeout(() => console.log(i), 1000 * i);
+}
