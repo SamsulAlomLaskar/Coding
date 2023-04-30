@@ -9,11 +9,15 @@ for (var i = 0; i < arr.length; i++) {
   }, 1000);
 }
 
+//* =======================================
+
 for (let i = 0; i < arr.length; i++) {
   setTimeout(() => {
     console.log(arr[i], "LET");
   }, 2000);
 }
+
+//* =======================================
 
 for (let i = 0; i < 5; i++) {
   setTimeout(() => console.log(i), 1000 * i);
