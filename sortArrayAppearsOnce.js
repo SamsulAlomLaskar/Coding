@@ -65,4 +65,53 @@ function search1(arr, n) {
 let arr1 = [1, 1, 2, 4, 4, 5, 5, 6, 6];
 let len1 = arr1.length;
 
-search1(arr, len1);
+search1(arr1, len1);
+
+//! =======================Method 3===============================
+
+/* 
+Time Complexity: O(n)
+Auxiliary Space: O(1) 
+
+An Efficient Solution can find the required element in O(Log n) time. The idea is to use Binary Search. Below is an observation on the input array. 
+All elements before the required have the first occurrence at even index (0, 2, ..) and the next occurrence at odd index (1, 3, …). And all elements after the required elements have the first occurrence at an odd index and the next occurrence at an even index. 
+
+Find the middle index, say ‘mid’.
+If ‘mid’ is even, then compare arr[mid] and arr[mid + 1]. If both are the same, then the required element after ‘mid’ and else before mid.
+If ‘mid’ is odd, then compare arr[mid] and arr[mid – 1]. If both are the same, then the required element after ‘mid’ and else before mid.
+*/
+
+// A Binary Search based function to find
+// the element that appears only once
+function search2(arr, low, high) {
+  // Base cases
+  if (low > high) return;
+
+  if (low == high) {
+    document.write("The required element is " + arr[low]);
+    return;
+  }
+
+  // Find the middle point
+  var mid = Math.floor((low + high) / 2);
+
+  // If mid is even and element next to mid is
+  // same as mid, then output element lies on
+  // right side, else on left side
+  if (mid % 2 == 0) {
+    if (arr[mid] == arr[mid + 1]) search(arr, mid + 2, high);
+    else search(arr, low, mid);
+  }
+
+  // If mid is odd
+  else {
+    if (arr[mid] == arr[mid - 1]) search(arr, mid + 1, high);
+    else search(arr, low, mid - 1);
+  }
+}
+
+// Driver Code
+var arr2 = [1, 1, 2, 4, 4, 5, 5, 6, 6];
+var len2 = arr2.length;
+
+search2(arr2, 0, len2 - 1);
