@@ -194,3 +194,49 @@ var arr3 = [1, 1, 2, 4, 4, 5, 5, 6, 6];
 var element = search3(arr3);
 if ((element = 2)) console.log("The required element is " + element);
 else console.log("There is no such element");
+
+//! =======================Method 5===============================
+/* 
+Time Complexity: O(logn)
+Auxiliary Space: O(1)
+
+ This article is contributed by Mehboob Elahi. Please write comments if you find anything incorrect, or you want to share more information about the topic discussed above.
+
+Another Approach:-
+
+We can simply use hashmap to store the frequency of the elements and after that we can just traverse the hashmap to find the element with frequency 1.
+*/
+
+// Javascript equivalent of above code
+
+// function to find element using dictionary
+function search4(arr) {
+  // taking dictionary to store frequency
+  let freq = {};
+
+  // iterating over array
+  for (let i of arr) {
+    // storing frequency
+    if (i in freq) {
+      freq[i] += 1;
+    } else {
+      freq[i] = 1;
+    }
+  }
+
+  // iterating over dictionary
+  for (let [key, value] of Object.entries(freq)) {
+    // if element found
+    if (value == 1) {
+      // printing element
+      console.log(key);
+      break;
+    }
+  }
+}
+
+// Driver code
+
+let arr4 = [1, 1, 2, 4, 4, 5, 5, 6, 6];
+
+search4(arr4);
