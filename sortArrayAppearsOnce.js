@@ -235,8 +235,6 @@ function search4(arr) {
   }
 }
 
-// Driver code
-
 let arr4 = [1, 1, 2, 4, 4, 5, 5, 6, 6];
 
 search4(arr4);
