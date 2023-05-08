@@ -13,11 +13,9 @@ Output:  8
 
 //* A Simple Solution is to traverse the array from left to right. Since the array is sorted, we can easily figure out the required element.
 
-// JavaScript program to find the element that
-// appears only once
+// JavaScript program to find the element that appears only once
 
-// A Linear Search based function to find
-// the element that appears only once
+// A Linear Search based function to find the element that appears only once
 function search(arr, n) {
   let ans = -1;
   for (let i = 0; i < n; i += 2) {
