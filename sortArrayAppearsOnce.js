@@ -205,8 +205,6 @@ Another Approach:-
 We can simply use hashmap to store the frequency of the elements and after that we can just traverse the hashmap to find the element with frequency 1.
 */
 
-// Javascript equivalent of above code
-
 // function to find element using dictionary
 function search4(arr) {
   // taking dictionary to store frequency
