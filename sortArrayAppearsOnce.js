@@ -13,8 +13,7 @@ Output:  8
 
 //* A Simple Solution is to traverse the array from left to right. Since the array is sorted, we can easily figure out the required element.
 
-// JavaScript program to find the element that appears only once
-// A Linear Search based function to find the element that appears only once
+// JavaScript program to find the element that appears only once. A Linear Search based function to find the element that appears only once
 
 function search(arr, n) {
   let ans = -1;
@@ -46,11 +45,9 @@ Auxiliary Space: O(1),  since no extra space has been taken.
 Another Simple Solution is to use the properties of XOR (a ^ a = 0 & a ^ 0 = a). The idea is to find the XOR of the complete array. The XOR of the array is the required answer.
  */
 
-// JavaScript program to find the element that
-// appears only once
+// JavaScript program to find the element that appears only once
 
-// A XOR based function to find
-// the element that appears only once
+// A XOR based function to find the element that appears only once
 function search1(arr, n) {
   let XOR = 0;
   for (let i = 0; i < n; i++) {
@@ -79,8 +76,7 @@ If ‘mid’ is even, then compare arr[mid] and arr[mid + 1]. If both are the sa
 If ‘mid’ is odd, then compare arr[mid] and arr[mid – 1]. If both are the same, then the required element after ‘mid’ and else before mid.
 */
 
-// A Binary Search based function to find
-// the element that appears only once
+// A Binary Search based function to find the element that appears only once
 function search2(arr, low, high) {
   // Base cases
   if (low > high) return;
@@ -93,9 +89,7 @@ function search2(arr, low, high) {
   // Find the middle point
   var mid = Math.floor((low + high) / 2);
 
-  // If mid is even and element next to mid is
-  // same as mid, then output element lies on
-  // right side, else on left side
+  // If mid is even and element next to mid is same as mid, then output element lies on right side, else on left side
   if (mid % 2 == 0) {
     if (arr[mid] == arr[mid + 1]) search2(arr, mid + 2, high);
     else search2(arr, low, mid);
