@@ -9,3 +9,11 @@
 const getUnique = (arr) => [...new Set(arr)];
 const arr = [1, 2, 2, 4, 5, 6, 6, 7, 7, 5, 5, 5, 8];
 console.log(getUnique(arr));
+
+// Detect Dark Mode
+
+const isDarkMode = () =>
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+console.log(isDarkMode());
