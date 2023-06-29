@@ -17,3 +17,8 @@ const isDarkMode = () =>
   window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 console.log(isDarkMode());
+
+// Scroll to top
+
+const scrollToTop = (element) =>
+  element.scrollIntoView({ behaviour: "smooth", block: "start" });
