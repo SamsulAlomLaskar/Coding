@@ -12,13 +12,20 @@ console.log(getUnique(arr));
 
 // Detect Dark Mode
 
-const isDarkMode = () =>
-  window.matchMedia &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
+// const isDarkMode = () =>
+//   window.matchMedia &&
+//   window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-console.log(isDarkMode());
+// console.log(isDarkMode());
 
 // Scroll to top
 
 const scrollToTop = (element) =>
   element.scrollIntoView({ behaviour: "smooth", block: "start" });
+
+// Generate Random Color
+
+const randomColorGenerator = `#${Math.floor(Math.random() * (256 * 256 * 256))
+  .toString(16)
+  .padStart(6, 0)}`;
+console.log(randomColorGenerator);
