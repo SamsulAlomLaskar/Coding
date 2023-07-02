@@ -44,3 +44,8 @@ if (navigator.share) {
 } else {
   console.log("Failed to share");
 }
+
+// Vibration API
+if (navigator.vibrate) {
+}
+navigator.vibrate(500);
