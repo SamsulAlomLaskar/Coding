@@ -49,3 +49,13 @@ if (navigator.share) {
 if (navigator.vibrate) {
 }
 navigator.vibrate(500);
+
+// Media Capture API
+navigator.mediaDevices
+  .getUserMedia({
+    video: true,
+    audio: true,
+  })
+  .then((stream) => {
+    //use the video element
+  });
