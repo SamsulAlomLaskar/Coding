@@ -59,3 +59,11 @@ navigator.mediaDevices
   .then((stream) => {
     //use the video element
   });
+
+// Web animations API
+
+let element = document.getElementById("circle");
+let animation = element.animate([{ opacity: 0 }, { opacity: 1 }], {
+  duration: 300,
+  easing: "linear",
+});
