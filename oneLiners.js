@@ -67,3 +67,12 @@ let animation = element.animate([{ opacity: 0 }, { opacity: 1 }], {
   duration: 300,
   easing: "linear",
 });
+
+// Detect Device
+const detectDeviceType = () =>
+  /Android|webOS|iPhone|iPad|iPod|Blackberry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+    ? "Mobile"
+    : "Desktop";
+console.log(detectDeviceType());
