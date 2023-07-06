@@ -76,3 +76,9 @@ const detectDeviceType = () =>
     ? "Mobile"
     : "Desktop";
 console.log(detectDeviceType());
+
+// Get the parameters from the URL
+
+const url = new URL(window.location.href);
+const paramValue = url.searchParams.get("paramName");
+console.log(paramValue);
