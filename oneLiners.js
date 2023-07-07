@@ -82,3 +82,18 @@ console.log(detectDeviceType());
 const url = new URL(window.location.href);
 const paramValue = url.searchParams.get("paramName");
 console.log(paramValue);
+
+// Deep copy
+
+const deepCopy = (obj) => JSON.parse(JSON.stringify(obj));
+
+// wait function
+
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const asyncFunc = async () => {
+  await wait(300);
+  console.log("Async");
+};
+
+asyncFunc();
