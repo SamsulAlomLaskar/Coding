@@ -108,3 +108,15 @@ function factorial(num) {
 }
 
 console.log(factorial(5));
+
+// Geolocation API
+
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition((position) => {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    console.log("Latitude", lat, "\nLongitude", lon);
+  });
+} else {
+  console.log("Geolocation is not supported by this browser");
+}
