@@ -109,7 +109,7 @@ function factorial(num) {
 
 console.log(factorial(5));
 
-// Geolocation API
+// Geolocation web API
 
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition((position) => {
@@ -120,3 +120,11 @@ if ("geolocation" in navigator) {
 } else {
   console.log("Geolocation is not supported by this browser");
 }
+
+// Geolocation API
+fetch("https://api.ipgeolocation.io/ipgeo?apiKey=''&ip=" + userIP)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("City :", data.city, "\nCountry :", data.country_name);
+  })
+  .catch((error) => console.error("Error: ", error));
