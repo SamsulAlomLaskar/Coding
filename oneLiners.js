@@ -12,11 +12,11 @@ console.log(getUnique(arr));
 
 // Detect Dark Mode
 
-// const isDarkMode = () =>
-//   window.matchMedia &&
-//   window.matchMedia("(prefers-color-scheme: dark)").matches;
+const isDarkMode = () =>
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-// console.log(isDarkMode());
+console.log(isDarkMode());
 
 // Scroll to top
 
@@ -121,7 +121,7 @@ if ("geolocation" in navigator) {
   console.log("Geolocation is not supported by this browser");
 }
 
-// Geolocation API
+// Geolocation http API
 fetch("https://api.ipgeolocation.io/ipgeo?apiKey=''&ip=" + userIP)
   .then((response) => response.json())
   .then((data) => {
