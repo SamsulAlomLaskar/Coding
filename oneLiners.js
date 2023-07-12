@@ -1,8 +1,8 @@
 // Copy to clipboard / AKA Clipboard API
-// const copyToClipboard = (text) =>
-//   navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
+const copyToClipboard = (text) =>
+  navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
 
-// copyToClipboard("Hello copy to clipboard");
+copyToClipboard("Hello copy to clipboard");
 
 // Unique Elements
 
