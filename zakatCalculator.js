@@ -4,6 +4,5 @@ const zakatCalculator = (zakataRate, zakatAmount) => {
   return Math.round(zakataRate * zakatAmount);
 };
 
-console.log(zakatCalculator(2500, 534023));
 const check = zakatCalculator(2500, 329083);
 console.log(check);
