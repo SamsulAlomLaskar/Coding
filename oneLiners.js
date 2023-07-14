@@ -1,4 +1,4 @@
-// Copy to clipboard
+// Copy to clipboard / AKA Clipboard API
 // const copyToClipboard = (text) =>
 //   navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
 
@@ -29,3 +29,50 @@ const randomColorGenerator = `#${Math.floor(Math.random() * (256 * 256 * 256))
   .toString(16)
   .padStart(6, 0)}`;
 console.log(randomColorGenerator);
+
+// Web Share API
+if (navigator.share) {
+  navigator
+    .share({
+      title: "Web Share API Demo",
+      url: "https://www.linkedin.com/in/samsulalomlaskar/",
+    })
+    .then(() => {
+      console.log("Thanks for sharing");
+    })
+    .catch(console.error);
+} else {
+  console.log("Failed to share");
+}
+
+// Vibration API
+if (navigator.vibrate) {
+}
+navigator.vibrate(500);
+
+// Media Capture API
+navigator.mediaDevices
+  .getUserMedia({
+    video: true,
+    audio: true,
+  })
+  .then((stream) => {
+    //use the video element
+  });
+
+// Web animations API
+
+let element = document.getElementById("circle");
+let animation = element.animate([{ opacity: 0 }, { opacity: 1 }], {
+  duration: 300,
+  easing: "linear",
+});
+
+// Detect Device
+const detectDeviceType = () =>
+  /Android|webOS|iPhone|iPad|iPod|Blackberry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+    ? "Mobile"
+    : "Desktop";
+console.log(detectDeviceType());
