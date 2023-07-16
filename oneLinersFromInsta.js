@@ -1,8 +1,8 @@
 // Copy to clipboard / AKA Clipboard API
-// const copyToClipboard = (text) =>
-//   navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
+const copyToClipboard = (text) =>
+  navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
 
-// copyToClipboard("Hello copy to clipboard");
+copyToClipboard("Hello copy to clipboard");
 
 // Unique Elements
 
@@ -12,11 +12,11 @@ console.log(getUnique(arr));
 
 // Detect Dark Mode
 
-// const isDarkMode = () =>
-//   window.matchMedia &&
-//   window.matchMedia("(prefers-color-scheme: dark)").matches;
+const isDarkMode = () =>
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-// console.log(isDarkMode());
+console.log(isDarkMode());
 
 // Scroll to top
 
@@ -108,3 +108,23 @@ function factorial(num) {
 }
 
 console.log(factorial(5));
+
+// Geolocation web API
+
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition((position) => {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    console.log("Latitude", lat, "\nLongitude", lon);
+  });
+} else {
+  console.log("Geolocation is not supported by this browser");
+}
+
+// Geolocation http API
+fetch("https://api.ipgeolocation.io/ipgeo?apiKey=''&ip=" + userIP)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("City :", data.city, "\nCountry :", data.country_name);
+  })
+  .catch((error) => console.error("Error: ", error));
