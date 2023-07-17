@@ -19,3 +19,14 @@ function calculateVolume(length) {
   };
 }
 console.log(calculateVolume(4)(5)(6));
+
+// Recursion example
+
+function factorial(num) {
+  if (num === 0) {
+    return 1;
+  }
+  return factorial(num - 1) * num;
+}
+
+console.log(factorial(5));
