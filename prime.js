@@ -12,4 +12,4 @@ function MathChallenge(num) {
 }
 
 // keep this function call here
-console.log(MathChallenge(17));
+// console.log(MathChallenge(17));
