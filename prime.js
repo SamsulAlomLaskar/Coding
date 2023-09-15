@@ -13,3 +13,5 @@ function MathChallenge(num) {
 
 // keep this function call here
 // console.log(MathChallenge(17));
+const resultPrime = MathChallenge(19);
+console.log(resultPrime);
